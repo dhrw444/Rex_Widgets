@@ -10,15 +10,16 @@ var WidgetMetadata = {
       id: "mgTv",
       title: "电视剧",
       functionName: "loadMgTv",
+      type: "media_list",
       channelId: 2,
       cacheDuration: 600,
       params: [
-        { name: "kind", title: "类型", type: "enumeration", default: "a1", enumOptions: [ { title: "全部", value: "a1" }, { title: "爱情", value: "3094" }, { title: "都市", value: "3093" }, { title: "青春", value: "3003" }, { title: "奇幻", value: "3092" }, { title: "军旅", value: "3091" }, { title: "武侠", value: "3090" }, { title: "古装", value: "148" }, { title: "科幻", value: "3088" }, { title: "竞技", value: "3087" }, { title: "传奇", value: "3086" }, { title: "家庭", value: "3007" }, { title: "历史", value: "3085" }, { title: "仙侠", value: "3084" }, { title: "喜剧", value: "3005" }, { title: "革命", value: "3083" }, { title: "悬疑", value: "3002" }, { title: "民国", value: "3153" }, { title: "现实", value: "3082" }, { title: "乡村", value: "3010" }, { title: "权谋", value: "3080" }, { title: "商战", value: "3078" }, { title: "逆袭", value: "3077" }, { title: "年代剧", value: "3116" }, { title: "神话", value: "3076" } ] },
-        { name: "area", title: "地区", type: "enumeration", default: "a1", enumOptions: [ { title: "全部", value: "a1" }, { title: "内地", value: "10" }, { title: "港台", value: "12" }, { title: "泰国", value: "193" } ] },
-        { name: "year", title: "年份", type: "enumeration", default: "all", enumOptions: [ { title: "全部", value: "all" }, { title: "2026", value: "2026" }, { title: "2025", value: "2025" }, { title: "2024", value: "2024" }, { title: "2023", value: "2023" }, { title: "2022", value: "2022" }, { title: "2021", value: "2021" }, { title: "2020", value: "2020" }, { title: "2019", value: "2019" }, { title: "2018", value: "2018" }, { title: "2017", value: "2017" }, { title: "2016", value: "2016" }, { title: "2015", value: "2015" }, { title: "2010-2014", value: "2014t2010" }, { title: "2000-2009", value: "2009t2000" }, { title: "90年代", value: "1990s" }, { title: "更早", value: "1989e" } ] },
-        { name: "feature", title: "状态", type: "enumeration", default: "all", enumOptions: [ { title: "全部", value: "all" }, { title: "已完结", value: "0" } ] },
-        { name: "chargeInfo", title: "资费", type: "enumeration", default: "a1", enumOptions: [ { title: "全部", value: "a1" }, { title: "免费", value: "b1" }, { title: "VIP", value: "b2" } ] },
-        { name: "sort", title: "排序", type: "enumeration", default: "c2", enumOptions: [ { title: "最热", value: "c2" }, { title: "最新", value: "c1" } ] },
+        { name: "kind", title: "类型", type: "enumeration", defaultValue: "a1", enumOptions: [ { title: "全部", value: "a1" }, { title: "爱情", value: "3094" }, { title: "都市", value: "3093" }, { title: "青春", value: "3003" }, { title: "奇幻", value: "3092" }, { title: "军旅", value: "3091" }, { title: "武侠", value: "3090" }, { title: "古装", value: "148" }, { title: "科幻", value: "3088" }, { title: "竞技", value: "3087" }, { title: "传奇", value: "3086" }, { title: "家庭", value: "3007" }, { title: "历史", value: "3085" }, { title: "仙侠", value: "3084" }, { title: "喜剧", value: "3005" }, { title: "革命", value: "3083" }, { title: "悬疑", value: "3002" }, { title: "民国", value: "3153" }, { title: "现实", value: "3082" }, { title: "乡村", value: "3010" }, { title: "权谋", value: "3080" }, { title: "商战", value: "3078" }, { title: "逆袭", value: "3077" }, { title: "年代剧", value: "3116" }, { title: "神话", value: "3076" } ] },
+        { name: "area", title: "地区", type: "enumeration", defaultValue: "a1", enumOptions: [ { title: "全部", value: "a1" }, { title: "内地", value: "10" }, { title: "港台", value: "12" }, { title: "泰国", value: "193" } ] },
+        { name: "year", title: "年份", type: "enumeration", defaultValue: "all", enumOptions: [ { title: "全部", value: "all" }, { title: "2026", value: "2026" }, { title: "2025", value: "2025" }, { title: "2024", value: "2024" }, { title: "2023", value: "2023" }, { title: "2022", value: "2022" }, { title: "2021", value: "2021" }, { title: "2020", value: "2020" }, { title: "2019", value: "2019" }, { title: "2018", value: "2018" }, { title: "2017", value: "2017" }, { title: "2016", value: "2016" }, { title: "2015", value: "2015" }, { title: "2010-2014", value: "2014t2010" }, { title: "2000-2009", value: "2009t2000" }, { title: "90年代", value: "1990s" }, { title: "更早", value: "1989e" } ] },
+        { name: "feature", title: "状态", type: "enumeration", defaultValue: "all", enumOptions: [ { title: "全部", value: "all" }, { title: "已完结", value: "0" } ] },
+        { name: "chargeInfo", title: "资费", type: "enumeration", defaultValue: "a1", enumOptions: [ { title: "全部", value: "a1" }, { title: "免费", value: "b1" }, { title: "VIP", value: "b2" } ] },
+        { name: "sort", title: "排序", type: "enumeration", defaultValue: "c2", enumOptions: [ { title: "最热", value: "c2" }, { title: "最新", value: "c1" } ] },
         { name: "page", title: "页码", type: "page" }
       ]
     },
@@ -26,15 +27,16 @@ var WidgetMetadata = {
       id: "mgMovie",
       title: "电影",
       functionName: "loadMgMovie",
+      type: "media_list",
       channelId: 3,
       cacheDuration: 600,
       params: [
-        { name: "kind", title: "类型", type: "enumeration", default: "a1", enumOptions: [ { title: "全部", value: "a1" }, { title: "爱情", value: "175" }, { title: "喜剧", value: "176" }, { title: "青春", value: "39" }, { title: "奇幻", value: "3027" }, { title: "剧情", value: "3028" }, { title: "国漫", value: "3096" }, { title: "科幻", value: "178" }, { title: "动作", value: "177" }, { title: "励志", value: "34" }, { title: "历史", value: "46" }, { title: "古装", value: "35" }, { title: "家庭", value: "36" }, { title: "战争", value: "44" }, { title: "犯罪", value: "3097" }, { title: "悬疑", value: "3029" }, { title: "经典", value: "3098" }, { title: "冒险", value: "3099" }, { title: "灾难", value: "3100" } ] },
-        { name: "edition", title: "版本", type: "enumeration", default: "a1", enumOptions: [ { title: "全部", value: "a1" }, { title: "院线大片", value: "182" }, { title: "独播影院", value: "183" } ] },
-        { name: "area", title: "地区", type: "enumeration", default: "a1", enumOptions: [ { title: "全部", value: "a1" }, { title: "内地", value: "27" }, { title: "中国香港", value: "3036" }, { title: "欧美", value: "3073" }, { title: "其他", value: "other" } ] },
-        { name: "year", title: "年份", type: "enumeration", default: "all", enumOptions: [ { title: "全部", value: "all" }, { title: "2026", value: "2026" }, { title: "2025", value: "2025" }, { title: "2024", value: "2024" }, { title: "2023", value: "2023" }, { title: "2022", value: "2022" }, { title: "2021", value: "2021" }, { title: "2020", value: "2020" }, { title: "2019", value: "2019" }, { title: "2018", value: "2018" }, { title: "2017", value: "2017" }, { title: "2016", value: "2016" }, { title: "2015", value: "2015" }, { title: "2010-2014", value: "2014t2010" }, { title: "2000-2009", value: "2009t2000" }, { title: "90年代", value: "1990s" }, { title: "更早", value: "1989e" } ] },
-        { name: "chargeInfo", title: "资费", type: "enumeration", default: "a1", enumOptions: [ { title: "全部", value: "a1" }, { title: "免费", value: "b1" }, { title: "VIP", value: "b2" }, { title: "VIP用券", value: "b3" }, { title: "付费点播", value: "b4" } ] },
-        { name: "sort", title: "排序", type: "enumeration", default: "c2", enumOptions: [ { title: "最热", value: "c2" }, { title: "最新", value: "c1" } ] },
+        { name: "kind", title: "类型", type: "enumeration", defaultValue: "a1", enumOptions: [ { title: "全部", value: "a1" }, { title: "爱情", value: "175" }, { title: "喜剧", value: "176" }, { title: "青春", value: "39" }, { title: "奇幻", value: "3027" }, { title: "剧情", value: "3028" }, { title: "国漫", value: "3096" }, { title: "科幻", value: "178" }, { title: "动作", value: "177" }, { title: "励志", value: "34" }, { title: "历史", value: "46" }, { title: "古装", value: "35" }, { title: "家庭", value: "36" }, { title: "战争", value: "44" }, { title: "犯罪", value: "3097" }, { title: "悬疑", value: "3029" }, { title: "经典", value: "3098" }, { title: "冒险", value: "3099" }, { title: "灾难", value: "3100" } ] },
+        { name: "edition", title: "版本", type: "enumeration", defaultValue: "a1", enumOptions: [ { title: "全部", value: "a1" }, { title: "院线大片", value: "182" }, { title: "独播影院", value: "183" } ] },
+        { name: "area", title: "地区", type: "enumeration", defaultValue: "a1", enumOptions: [ { title: "全部", value: "a1" }, { title: "内地", value: "27" }, { title: "中国香港", value: "3036" }, { title: "欧美", value: "3073" }, { title: "其他", value: "other" } ] },
+        { name: "year", title: "年份", type: "enumeration", defaultValue: "all", enumOptions: [ { title: "全部", value: "all" }, { title: "2026", value: "2026" }, { title: "2025", value: "2025" }, { title: "2024", value: "2024" }, { title: "2023", value: "2023" }, { title: "2022", value: "2022" }, { title: "2021", value: "2021" }, { title: "2020", value: "2020" }, { title: "2019", value: "2019" }, { title: "2018", value: "2018" }, { title: "2017", value: "2017" }, { title: "2016", value: "2016" }, { title: "2015", value: "2015" }, { title: "2010-2014", value: "2014t2010" }, { title: "2000-2009", value: "2009t2000" }, { title: "90年代", value: "1990s" }, { title: "更早", value: "1989e" } ] },
+        { name: "chargeInfo", title: "资费", type: "enumeration", defaultValue: "a1", enumOptions: [ { title: "全部", value: "a1" }, { title: "免费", value: "b1" }, { title: "VIP", value: "b2" }, { title: "VIP用券", value: "b3" }, { title: "付费点播", value: "b4" } ] },
+        { name: "sort", title: "排序", type: "enumeration", defaultValue: "c2", enumOptions: [ { title: "最热", value: "c2" }, { title: "最新", value: "c1" } ] },
         { name: "page", title: "页码", type: "page" }
       ]
     },
@@ -42,12 +44,13 @@ var WidgetMetadata = {
       id: "mgVariety",
       title: "综艺",
       functionName: "loadMgVariety",
+      type: "media_list",
       channelId: 1,
       cacheDuration: 600,
       params: [
-        { name: "kind", title: "类型", type: "enumeration", default: "a1", enumOptions: [ { title: "全部", value: "a1" }, { title: "音乐", value: "8" }, { title: "推理", value: "3075" }, { title: "生活", value: "9" }, { title: "情感", value: "7" }, { title: "旅游", value: "170" }, { title: "播客", value: "3157" }, { title: "文化", value: "3143" }, { title: "美食", value: "3011" }, { title: "语言", value: "3152" }, { title: "亲子", value: "179" }, { title: "游戏", value: "3144" }, { title: "演唱会", value: "4" }, { title: "竞技", value: "174" }, { title: "表演", value: "180" } ] },
-        { name: "chargeInfo", title: "资费", type: "enumeration", default: "a1", enumOptions: [ { title: "全部", value: "a1" }, { title: "免费", value: "b1" }, { title: "VIP", value: "b2" } ] },
-        { name: "sort", title: "排序", type: "enumeration", default: "c2", enumOptions: [ { title: "最热", value: "c2" }, { title: "最新", value: "c1" } ] },
+        { name: "kind", title: "类型", type: "enumeration", defaultValue: "a1", enumOptions: [ { title: "全部", value: "a1" }, { title: "音乐", value: "8" }, { title: "推理", value: "3075" }, { title: "生活", value: "9" }, { title: "情感", value: "7" }, { title: "旅游", value: "170" }, { title: "播客", value: "3157" }, { title: "文化", value: "3143" }, { title: "美食", value: "3011" }, { title: "语言", value: "3152" }, { title: "亲子", value: "179" }, { title: "游戏", value: "3144" }, { title: "演唱会", value: "4" }, { title: "竞技", value: "174" }, { title: "表演", value: "180" } ] },
+        { name: "chargeInfo", title: "资费", type: "enumeration", defaultValue: "a1", enumOptions: [ { title: "全部", value: "a1" }, { title: "免费", value: "b1" }, { title: "VIP", value: "b2" } ] },
+        { name: "sort", title: "排序", type: "enumeration", defaultValue: "c2", enumOptions: [ { title: "最热", value: "c2" }, { title: "最新", value: "c1" } ] },
         { name: "page", title: "页码", type: "page" }
       ]
     },
@@ -55,13 +58,14 @@ var WidgetMetadata = {
       id: "mgAnime",
       title: "动漫",
       functionName: "loadMgAnime",
+      type: "media_list",
       channelId: 50,
       cacheDuration: 600,
       params: [
-        { name: "kind", title: "类型", type: "enumeration", default: "a1", enumOptions: [ { title: "全部", value: "a1" }, { title: "恋爱", value: "84" }, { title: "冒险", value: "87" }, { title: "魔法", value: "64" }, { title: "青春", value: "63" }, { title: "搞笑", value: "62" }, { title: "玄幻", value: "3150" }, { title: "武侠", value: "195" }, { title: "科幻", value: "90" }, { title: "经典", value: "71" }, { title: "特摄", value: "66" }, { title: "悬疑", value: "3112" } ] },
-        { name: "area", title: "地区", type: "enumeration", default: "a1", enumOptions: [ { title: "全部", value: "a1" }, { title: "内地", value: "52" }, { title: "欧美", value: "53" }, { title: "其他", value: "55" } ] },
-        { name: "edition", title: "版本", type: "enumeration", default: "a1", enumOptions: [ { title: "全部", value: "a1" }, { title: "TV版", value: "57" }, { title: "剧场版", value: "165" }, { title: "真人版", value: "167" }, { title: "其他", value: "58" } ] },
-        { name: "sort", title: "排序", type: "enumeration", default: "c1", enumOptions: [ { title: "最新", value: "c1" }, { title: "最热", value: "c2" } ] },
+        { name: "kind", title: "类型", type: "enumeration", defaultValue: "a1", enumOptions: [ { title: "全部", value: "a1" }, { title: "恋爱", value: "84" }, { title: "冒险", value: "87" }, { title: "魔法", value: "64" }, { title: "青春", value: "63" }, { title: "搞笑", value: "62" }, { title: "玄幻", value: "3150" }, { title: "武侠", value: "195" }, { title: "科幻", value: "90" }, { title: "经典", value: "71" }, { title: "特摄", value: "66" }, { title: "悬疑", value: "3112" } ] },
+        { name: "area", title: "地区", type: "enumeration", defaultValue: "a1", enumOptions: [ { title: "全部", value: "a1" }, { title: "内地", value: "52" }, { title: "欧美", value: "53" }, { title: "其他", value: "55" } ] },
+        { name: "edition", title: "版本", type: "enumeration", defaultValue: "a1", enumOptions: [ { title: "全部", value: "a1" }, { title: "TV版", value: "57" }, { title: "剧场版", value: "165" }, { title: "真人版", value: "167" }, { title: "其他", value: "58" } ] },
+        { name: "sort", title: "排序", type: "enumeration", defaultValue: "c1", enumOptions: [ { title: "最新", value: "c1" }, { title: "最热", value: "c2" } ] },
         { name: "page", title: "页码", type: "page" }
       ]
     },
@@ -69,11 +73,12 @@ var WidgetMetadata = {
       id: "mgDoc",
       title: "纪录片",
       functionName: "loadMgDoc",
+      type: "media_list",
       channelId: 51,
       cacheDuration: 600,
       params: [
-        { name: "kind", title: "类型", type: "enumeration", default: "a1", enumOptions: [ { title: "全部", value: "a1" }, { title: "文化", value: "98" }, { title: "励志", value: "99" }, { title: "历史", value: "100" }, { title: "生活", value: "97" }, { title: "乡村", value: "3147" }, { title: "职业", value: "3148" }, { title: "青春", value: "3149" }, { title: "旅游", value: "103" }, { title: "科普", value: "3146" }, { title: "军事", value: "101" }, { title: "运动", value: "104" }, { title: "动物", value: "3026" } ] },
-        { name: "sort", title: "排序", type: "enumeration", default: "c1", enumOptions: [ { title: "最新", value: "c1" }, { title: "最热", value: "c2" } ] },
+        { name: "kind", title: "类型", type: "enumeration", defaultValue: "a1", enumOptions: [ { title: "全部", value: "a1" }, { title: "文化", value: "98" }, { title: "励志", value: "99" }, { title: "历史", value: "100" }, { title: "生活", value: "97" }, { title: "乡村", value: "3147" }, { title: "职业", value: "3148" }, { title: "青春", value: "3149" }, { title: "旅游", value: "103" }, { title: "科普", value: "3146" }, { title: "军事", value: "101" }, { title: "运动", value: "104" }, { title: "动物", value: "3026" } ] },
+        { name: "sort", title: "排序", type: "enumeration", defaultValue: "c1", enumOptions: [ { title: "最新", value: "c1" }, { title: "最热", value: "c2" } ] },
         { name: "page", title: "页码", type: "page" }
       ]
     },
@@ -81,12 +86,13 @@ var WidgetMetadata = {
       id: "mgKids",
       title: "少儿",
       functionName: "loadMgKids",
+      type: "media_list",
       channelId: 10,
       cacheDuration: 600,
       params: [
-        { name: "kind", title: "类型", type: "enumeration", default: "a1", enumOptions: [ { title: "全部", value: "a1" }, { title: "儿歌", value: "184" }, { title: "冒险", value: "87" }, { title: "益智", value: "83" }, { title: "魔法", value: "3103" }, { title: "机甲", value: "3104" }, { title: "经典", value: "95" }, { title: "竞技", value: "88" }, { title: "搞笑", value: "62" }, { title: "励志", value: "194" }, { title: "科幻", value: "90" }, { title: "早教", value: "3101" } ] },
-        { name: "fitAge", title: "年龄段", type: "enumeration", default: "a1", enumOptions: [ { title: "全部", value: "a1" }, { title: "0-3岁", value: "74" }, { title: "4-6岁", value: "75" }, { title: "7-10岁", value: "76" }, { title: "11-14岁", value: "77" } ] },
-        { name: "sort", title: "排序", type: "enumeration", default: "c1", enumOptions: [ { title: "最新", value: "c1" }, { title: "最热", value: "c2" } ] },
+        { name: "kind", title: "类型", type: "enumeration", defaultValue: "a1", enumOptions: [ { title: "全部", value: "a1" }, { title: "儿歌", value: "184" }, { title: "冒险", value: "87" }, { title: "益智", value: "83" }, { title: "魔法", value: "3103" }, { title: "机甲", value: "3104" }, { title: "经典", value: "95" }, { title: "竞技", value: "88" }, { title: "搞笑", value: "62" }, { title: "励志", value: "194" }, { title: "科幻", value: "90" }, { title: "早教", value: "3101" } ] },
+        { name: "fitAge", title: "年龄段", type: "enumeration", defaultValue: "a1", enumOptions: [ { title: "全部", value: "a1" }, { title: "0-3岁", value: "74" }, { title: "4-6岁", value: "75" }, { title: "7-10岁", value: "76" }, { title: "11-14岁", value: "77" } ] },
+        { name: "sort", title: "排序", type: "enumeration", defaultValue: "c1", enumOptions: [ { title: "最新", value: "c1" }, { title: "最热", value: "c2" } ] },
         { name: "page", title: "页码", type: "page" }
       ]
     }

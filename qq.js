@@ -10,24 +10,25 @@ var WidgetMetadata = {
       id: "qqTv",
       title: "电视剧",
       functionName: "loadQqTv",
+      type: "media_list",
       cacheDuration: 600,
       params: [
-        { name: "itype", title: "类型", type: "enumeration", default: "all", enumOptions: [
+        { name: "itype", title: "类型", type: "enumeration", defaultValue: "all", enumOptions: [
           { title: "全部", value: "all" }, { title: "爱情", value: "1" }, { title: "都市", value: "2" }, { title: "青春", value: "3" },
           { title: "奇幻", value: "4" }, { title: "武侠", value: "5" }, { title: "古装", value: "6" }, { title: "科幻", value: "7" },
           { title: "猎奇", value: "8" }, { title: "竞技", value: "9" }, { title: "传奇", value: "10" }, { title: "逆袭", value: "19" },
           { title: "军旅", value: "11" }, { title: "家庭", value: "12" }, { title: "喜剧", value: "13" }, { title: "悬疑", value: "14" },
           { title: "权谋", value: "15" }, { title: "革命", value: "16" }, { title: "现实", value: "17" }, { title: "刑侦", value: "18" },
           { title: "民国", value: "20" }, { title: "IP改编", value: "21" } ] },
-        { name: "iarea", title: "地区", type: "enumeration", default: "all", enumOptions: [
+        { name: "iarea", title: "地区", type: "enumeration", defaultValue: "all", enumOptions: [
           { title: "全部", value: "all" }, { title: "内地", value: "0" }, { title: "中国香港", value: "14" }, { title: "中国台湾", value: "4" },
           { title: "美国", value: "8" }, { title: "泰国", value: "9" }, { title: "英国", value: "1" }, { title: "韩国", value: "5" },
           { title: "日本", value: "10" }, { title: "其他", value: "9999" } ] },
-        { name: "iyear", title: "年份", type: "enumeration", default: "all", enumOptions: [
+        { name: "iyear", title: "年份", type: "enumeration", defaultValue: "all", enumOptions: [
           { title: "全部", value: "all" }, { title: "即将上线", value: "1" }, { title: "2026", value: "2026" }, { title: "2025", value: "2025" },
           { title: "2024", value: "2" }, { title: "2023", value: "3" }, { title: "2022", value: "4" }, { title: "2021", value: "5" },
           { title: "2020-2016", value: "6" }, { title: "2015-2011", value: "7" }, { title: "2010-2000", value: "8" }, { title: "更早", value: "9" } ] },
-        { name: "sort", title: "排序", type: "enumeration", default: "75", enumOptions: [
+        { name: "sort", title: "排序", type: "enumeration", defaultValue: "75", enumOptions: [
           { title: "最热", value: "75" }, { title: "最新上架", value: "79" }, { title: "高分好评", value: "85" } ] },
         { name: "page", title: "页码", type: "page" }
       ]
@@ -36,29 +37,30 @@ var WidgetMetadata = {
       id: "qqMovie",
       title: "电影",
       functionName: "loadQqMovie",
+      type: "media_list",
       cacheDuration: 600,
       params: [
-        { name: "itype", title: "类型", type: "enumeration", default: "all", enumOptions: [
+        { name: "itype", title: "类型", type: "enumeration", defaultValue: "all", enumOptions: [
           { title: "全部", value: "all" }, { title: "动作", value: "4" }, { title: "喜剧", value: "3" }, { title: "爱情", value: "5" },
           { title: "科幻", value: "12" }, { title: "犯罪", value: "6" }, { title: "冒险", value: "7" }, { title: "恐怖", value: "11" },
           { title: "动画", value: "15" }, { title: "战争", value: "8" }, { title: "悬疑", value: "10" }, { title: "灾难", value: "25" },
           { title: "青春", value: "26" } ] },
-        { name: "iarea", title: "地区", type: "enumeration", default: "all", enumOptions: [
+        { name: "iarea", title: "地区", type: "enumeration", defaultValue: "all", enumOptions: [
           { title: "全部", value: "all" }, { title: "内地", value: "100024" }, { title: "中国香港", value: "100025" }, { title: "中国台湾", value: "100026" },
           { title: "美国", value: "100029" }, { title: "日本", value: "100027" }, { title: "韩国", value: "100028" }, { title: "泰国", value: "100031" },
           { title: "印度", value: "100030" }, { title: "英国", value: "15" }, { title: "法国", value: "16" }, { title: "德国", value: "17" },
           { title: "加拿大", value: "18" }, { title: "西班牙", value: "19" }, { title: "意大利", value: "20" }, { title: "澳大利亚", value: "21" },
           { title: "其他", value: "100033" } ] },
-        { name: "iyear", title: "年份", type: "enumeration", default: "all", enumOptions: [
+        { name: "iyear", title: "年份", type: "enumeration", defaultValue: "all", enumOptions: [
           { title: "全部", value: "all" }, { title: "即将上线", value: "999" }, { title: "2026", value: "2026" }, { title: "2025", value: "2025" },
           { title: "2024", value: "2024" }, { title: "2023", value: "2023" }, { title: "2022", value: "2022" }, { title: "2021", value: "2021" },
           { title: "2020", value: "2020" }, { title: "2019", value: "20" }, { title: "2018", value: "2018" }, { title: "2017", value: "1" },
           { title: "2016", value: "2" }, { title: "2015", value: "3" }, { title: "2014", value: "4" }, { title: "2013-2011", value: "5" },
           { title: "2010-2006", value: "6" }, { title: "2005-2000", value: "7" }, { title: "90年代", value: "8" }, { title: "80年代", value: "9" } ] },
-        { name: "characteristic", title: "特色", type: "enumeration", default: "all", enumOptions: [
+        { name: "characteristic", title: "特色", type: "enumeration", defaultValue: "all", enumOptions: [
           { title: "全部", value: "all" }, { title: "院线电影", value: "1" }, { title: "网络电影", value: "2" },
           { title: "独播", value: "5" }, { title: "原声", value: "8" }, { title: "粤语", value: "9" }, { title: "获奖佳片", value: "6" } ] },
-        { name: "sort", title: "排序", type: "enumeration", default: "75", enumOptions: [
+        { name: "sort", title: "排序", type: "enumeration", defaultValue: "75", enumOptions: [
           { title: "最热", value: "75" }, { title: "最新", value: "83" }, { title: "高分好评", value: "81" } ] },
         { name: "page", title: "页码", type: "page" }
       ]
@@ -67,24 +69,25 @@ var WidgetMetadata = {
       id: "qqVariety",
       title: "综艺",
       functionName: "loadQqVariety",
+      type: "media_list",
       cacheDuration: 600,
       params: [
-        { name: "itype", title: "类型", type: "enumeration", default: "all", enumOptions: [
+        { name: "itype", title: "类型", type: "enumeration", defaultValue: "all", enumOptions: [
           { title: "全部", value: "all" }, { title: "游戏", value: "10" }, { title: "脱口秀", value: "2" }, { title: "音乐舞台", value: "11" },
           { title: "情感", value: "12" }, { title: "生活", value: "22" }, { title: "职场", value: "20" }, { title: "喜剧", value: "14" },
           { title: "美食", value: "19" }, { title: "潮流运动", value: "21" }, { title: "竞技", value: "24" }, { title: "影视", value: "16" },
           { title: "电竞", value: "15" }, { title: "推理", value: "25" }, { title: "访谈", value: "3" }, { title: "亲子", value: "17" },
           { title: "文化", value: "26" }, { title: "互动", value: "23" }, { title: "晚会", value: "6" }, { title: "资讯", value: "7" } ] },
-        { name: "iarea", title: "地区", type: "enumeration", default: "all", enumOptions: [
+        { name: "iarea", title: "地区", type: "enumeration", defaultValue: "all", enumOptions: [
           { title: "全部", value: "all" }, { title: "国内", value: "1" }, { title: "海外", value: "2" } ] },
-        { name: "exclusive", title: "特色", type: "enumeration", default: "all", enumOptions: [
+        { name: "exclusive", title: "特色", type: "enumeration", defaultValue: "all", enumOptions: [
           { title: "全部", value: "all" }, { title: "腾讯自制", value: "1" }, { title: "独播", value: "2" } ] },
-        { name: "iyear", title: "年份", type: "enumeration", default: "all", enumOptions: [
+        { name: "iyear", title: "年份", type: "enumeration", defaultValue: "all", enumOptions: [
           { title: "全部", value: "all" }, { title: "2026", value: "2026" }, { title: "2025", value: "2025" }, { title: "2024", value: "2024" },
           { title: "2023", value: "2023" }, { title: "2022", value: "2022" }, { title: "2021", value: "2021" }, { title: "2020", value: "50" },
           { title: "2019", value: "7" }, { title: "2018", value: "1" }, { title: "2017", value: "2" }, { title: "2016", value: "3" },
           { title: "2015", value: "4" }, { title: "2014", value: "5" }, { title: "2013", value: "6" }, { title: "更早", value: "99" } ] },
-        { name: "sort", title: "排序", type: "enumeration", default: "75", enumOptions: [
+        { name: "sort", title: "排序", type: "enumeration", defaultValue: "75", enumOptions: [
           { title: "最热", value: "75" }, { title: "最近更新", value: "23" }, { title: "高分好评", value: "85" } ] },
         { name: "page", title: "页码", type: "page" }
       ]
@@ -93,26 +96,27 @@ var WidgetMetadata = {
       id: "qqAnime",
       title: "动漫",
       functionName: "loadQqAnime",
+      type: "media_list",
       cacheDuration: 600,
       params: [
-        { name: "iarea", title: "地区", type: "enumeration", default: "all", enumOptions: [
+        { name: "iarea", title: "地区", type: "enumeration", defaultValue: "all", enumOptions: [
           { title: "全部", value: "all" }, { title: "内地（国漫）", value: "1" }, { title: "日本", value: "2" }, { title: "欧美", value: "3" }, { title: "其他", value: "4" } ] },
-        { name: "itype", title: "类型", type: "enumeration", default: "all", enumOptions: [
+        { name: "itype", title: "类型", type: "enumeration", defaultValue: "all", enumOptions: [
           { title: "全部", value: "all" }, { title: "玄幻", value: "9" }, { title: "仙侠", value: "23" }, { title: "恋爱", value: "7" },
           { title: "搞笑", value: "1" }, { title: "冒险", value: "2" }, { title: "科幻", value: "4" }, { title: "奇幻", value: "21" },
           { title: "武侠", value: "13" }, { title: "都市", value: "24" }, { title: "悬疑", value: "17" }, { title: "竞技", value: "20" },
           { title: "日常", value: "15" }, { title: "治愈", value: "25" }, { title: "游戏", value: "26" }, { title: "异能", value: "27" },
           { title: "历史", value: "19" }, { title: "古风", value: "28" }, { title: "智斗", value: "29" }, { title: "恐怖", value: "30" },
           { title: "美食", value: "31" }, { title: "音乐", value: "32" }, { title: "真人", value: "18" }, { title: "其他", value: "12" } ] },
-        { name: "anime_status", title: "状态", type: "enumeration", default: "all", enumOptions: [
+        { name: "anime_status", title: "状态", type: "enumeration", defaultValue: "all", enumOptions: [
           { title: "全部", value: "all" }, { title: "更新中", value: "44" }, { title: "已完结", value: "45" }, { title: "即将上线", value: "46" } ] },
-        { name: "item", title: "画风", type: "enumeration", default: "all", enumOptions: [
+        { name: "item", title: "画风", type: "enumeration", defaultValue: "all", enumOptions: [
           { title: "全部", value: "all" }, { title: "2D动画", value: "3" }, { title: "3D动画", value: "2" }, { title: "特摄", value: "4" }, { title: "其他", value: "5" } ] },
-        { name: "iyear", title: "年份", type: "enumeration", default: "all", enumOptions: [
+        { name: "iyear", title: "年份", type: "enumeration", defaultValue: "all", enumOptions: [
           { title: "全部", value: "all" }, { title: "2026", value: "2026" }, { title: "2025", value: "2025" }, { title: "2024", value: "2024" },
           { title: "2023", value: "2023" }, { title: "2022", value: "2022" }, { title: "2021", value: "2021" }, { title: "2020", value: "50" },
           { title: "2019", value: "11" }, { title: "2018", value: "2018" }, { title: "2017", value: "2017" }, { title: "更早", value: "10" } ] },
-        { name: "sort", title: "排序", type: "enumeration", default: "75", enumOptions: [
+        { name: "sort", title: "排序", type: "enumeration", defaultValue: "75", enumOptions: [
           { title: "最热", value: "75" }, { title: "最近更新", value: "23" }, { title: "高分好评", value: "85" } ] },
         { name: "page", title: "页码", type: "page" }
       ]
@@ -121,24 +125,25 @@ var WidgetMetadata = {
       id: "qqDoc",
       title: "纪录片",
       functionName: "loadQqDoc",
+      type: "media_list",
       cacheDuration: 600,
       params: [
-        { name: "itype", title: "类型", type: "enumeration", default: "all", enumOptions: [
+        { name: "itype", title: "类型", type: "enumeration", defaultValue: "all", enumOptions: [
           { title: "全部", value: "all" }, { title: "自然", value: "4" }, { title: "美食", value: "10" }, { title: "社会", value: "3" },
           { title: "人文", value: "6" }, { title: "历史", value: "1" }, { title: "军事", value: "2" }, { title: "科技", value: "8" },
           { title: "财经", value: "14" }, { title: "探险", value: "15" }, { title: "罪案", value: "7" }, { title: "竞技", value: "12" },
           { title: "旅游", value: "11" } ] },
-        { name: "itrailer", title: "出品方", type: "enumeration", default: "all", enumOptions: [
+        { name: "itrailer", title: "出品方", type: "enumeration", defaultValue: "all", enumOptions: [
           { title: "全部", value: "all" }, { title: "腾讯出品", value: "15" }, { title: "央视", value: "8" }, { title: "BBC", value: "1" },
           { title: "国家地理", value: "4" }, { title: "探索频道", value: "3174" }, { title: "HBO", value: "3175" }, { title: "NHK", value: "2" },
           { title: "ITV", value: "3530" }, { title: "历史频道", value: "7" } ] },
-        { name: "iregion", title: "地区", type: "enumeration", default: "all", enumOptions: [
+        { name: "iregion", title: "地区", type: "enumeration", defaultValue: "all", enumOptions: [
           { title: "全部", value: "all" }, { title: "国内", value: "1" }, { title: "国外", value: "2" } ] },
-        { name: "iyear", title: "年份", type: "enumeration", default: "all", enumOptions: [
+        { name: "iyear", title: "年份", type: "enumeration", defaultValue: "all", enumOptions: [
           { title: "全部", value: "all" }, { title: "2026", value: "2026" }, { title: "2025", value: "2025" }, { title: "2024", value: "1" },
           { title: "2023", value: "2" }, { title: "2022", value: "3" }, { title: "2021", value: "4" }, { title: "2020", value: "5" },
           { title: "2019-2015", value: "6" }, { title: "2014-2010", value: "7" }, { title: "2009-2005", value: "8" }, { title: "更早", value: "9" } ] },
-        { name: "sort", title: "排序", type: "enumeration", default: "75", enumOptions: [
+        { name: "sort", title: "排序", type: "enumeration", defaultValue: "75", enumOptions: [
           { title: "最热", value: "75" }, { title: "最新", value: "74" }, { title: "高分好评", value: "85" } ] },
         { name: "page", title: "页码", type: "page" }
       ]
@@ -147,22 +152,23 @@ var WidgetMetadata = {
       id: "qqKids",
       title: "少儿",
       functionName: "loadQqKids",
+      type: "media_list",
       cacheDuration: 600,
       params: [
-        { name: "iyear", title: "年龄段", type: "enumeration", default: "all", enumOptions: [
+        { name: "iyear", title: "年龄段", type: "enumeration", defaultValue: "all", enumOptions: [
           { title: "全部", value: "all" }, { title: "0-3岁", value: "1" }, { title: "4-6岁", value: "2" },
           { title: "7-9岁", value: "3" }, { title: "10岁以上", value: "4" }, { title: "全年龄", value: "7" } ] },
-        { name: "all", title: "主题", type: "enumeration", default: "all", enumOptions: [
+        { name: "all", title: "主题", type: "enumeration", defaultValue: "all", enumOptions: [
           { title: "全部", value: "all" }, { title: "儿歌·童谣", value: "2" }, { title: "绘本·故事", value: "3" }, { title: "动画", value: "20" },
           { title: "早教", value: "7" }, { title: "科普", value: "23" }, { title: "英语", value: "15" }, { title: "国学", value: "11" },
           { title: "恐龙", value: "6" }, { title: "汽车", value: "5" }, { title: "玩具节目", value: "10" }, { title: "安全", value: "12" },
           { title: "行为习惯", value: "14" }, { title: "情商教育", value: "17" }, { title: "入园", value: "9" }, { title: "幼小衔接", value: "18" },
           { title: "真人剧", value: "21" }, { title: "搞笑", value: "25" }, { title: "优质佳作", value: "26" } ] },
-        { name: "gender", title: "性别", type: "enumeration", default: "all", enumOptions: [
+        { name: "gender", title: "性别", type: "enumeration", defaultValue: "all", enumOptions: [
           { title: "全部", value: "all" }, { title: "男孩", value: "2" }, { title: "女孩", value: "1" } ] },
-        { name: "language", title: "语言", type: "enumeration", default: "all", enumOptions: [
+        { name: "language", title: "语言", type: "enumeration", defaultValue: "all", enumOptions: [
           { title: "全部", value: "all" }, { title: "普通话版", value: "3" }, { title: "英文版", value: "1" } ] },
-        { name: "sort", title: "排序", type: "enumeration", default: "75", enumOptions: [
+        { name: "sort", title: "排序", type: "enumeration", defaultValue: "75", enumOptions: [
           { title: "最热", value: "75" }, { title: "最新", value: "76" } ] },
         { name: "page", title: "页码", type: "page" }
       ]

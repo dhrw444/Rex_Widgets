@@ -6,17 +6,18 @@ var WidgetMetadata = {
   description: "优酷片库：按频道 + 地区 + 年份筛选，自动翻页，输出 TMDB 条目（含封面）。需配合 youku-worker 中转（优酷签名在浏览器环境算不了）",
   author: "𝙈𝙖𝙠𝙠𝙖𝙋𝙖𝙠𝙠𝙖",
   globalParams: [
-    { name: "base", title: "API 地址", type: "input", default: "", description: "留空使用内置地址；如需换自己的 Worker，在此填写完整地址" }
+    { name: "base", title: "API 地址", type: "input", defaultValue: "", description: "留空使用内置地址；如需换自己的 Worker，在此填写完整地址" }
   ],
   modules: [
     {
       id: "ykTv",
       title: "电视剧",
       functionName: "loadYkTv",
+      type: "media_list",
       cacheDuration: 600,
       params: [
-        { name: "mainArea", title: "地区", type: "enumeration", default: "", enumOptions: [ { title: "全部地区", value: "" }, { title: "中国内地", value: "中国内地" }, { title: "中国香港", value: "中国香港" }, { title: "中国台湾", value: "中国台湾" }, { title: "韩国", value: "韩国" }, { title: "美国", value: "美国" }, { title: "英国", value: "英国" }, { title: "日本", value: "日本" }, { title: "泰国", value: "泰国" } ] },
-        { name: "year", title: "年份", type: "enumeration", default: "", enumOptions: [ { title: "全部年份", value: "" }, { title: "即将上线", value: "即将上线" }, { title: "2026", value: "2026" }, { title: "2025", value: "2025" }, { title: "2024", value: "2024" }, { title: "2023", value: "2023" }, { title: "2022", value: "2022" }, { title: "2021", value: "2021" }, { title: "2020", value: "2020" }, { title: "2019", value: "2019" }, { title: "2018", value: "2018" }, { title: "2017", value: "2017" }, { title: "2016", value: "2016" }, { title: "2015", value: "2015" }, { title: "2014-2011", value: "2014-2011" }, { title: "更早", value: "更早" } ] },
+        { name: "mainArea", title: "地区", type: "enumeration", defaultValue: "", enumOptions: [ { title: "全部地区", value: "" }, { title: "中国内地", value: "中国内地" }, { title: "中国香港", value: "中国香港" }, { title: "中国台湾", value: "中国台湾" }, { title: "韩国", value: "韩国" }, { title: "美国", value: "美国" }, { title: "英国", value: "英国" }, { title: "日本", value: "日本" }, { title: "泰国", value: "泰国" } ] },
+        { name: "year", title: "年份", type: "enumeration", defaultValue: "", enumOptions: [ { title: "全部年份", value: "" }, { title: "即将上线", value: "即将上线" }, { title: "2026", value: "2026" }, { title: "2025", value: "2025" }, { title: "2024", value: "2024" }, { title: "2023", value: "2023" }, { title: "2022", value: "2022" }, { title: "2021", value: "2021" }, { title: "2020", value: "2020" }, { title: "2019", value: "2019" }, { title: "2018", value: "2018" }, { title: "2017", value: "2017" }, { title: "2016", value: "2016" }, { title: "2015", value: "2015" }, { title: "2014-2011", value: "2014-2011" }, { title: "更早", value: "更早" } ] },
         { name: "page", title: "页码", type: "page" }
       ]
     },
@@ -24,10 +25,11 @@ var WidgetMetadata = {
       id: "ykMovie",
       title: "电影",
       functionName: "loadYkMovie",
+      type: "media_list",
       cacheDuration: 600,
       params: [
-        { name: "mainArea", title: "地区", type: "enumeration", default: "", enumOptions: [ { title: "全部地区", value: "" }, { title: "中国内地", value: "中国内地" }, { title: "中国香港", value: "中国香港" }, { title: "中国台湾", value: "中国台湾" }, { title: "韩国", value: "韩国" }, { title: "美国", value: "美国" }, { title: "英国", value: "英国" }, { title: "日本", value: "日本" }, { title: "泰国", value: "泰国" } ] },
-        { name: "year", title: "年份", type: "enumeration", default: "", enumOptions: [ { title: "全部年份", value: "" }, { title: "即将上线", value: "即将上线" }, { title: "2026", value: "2026" }, { title: "2025", value: "2025" }, { title: "2024", value: "2024" }, { title: "2023", value: "2023" }, { title: "2022", value: "2022" }, { title: "2021", value: "2021" }, { title: "2020", value: "2020" }, { title: "2019", value: "2019" }, { title: "2018", value: "2018" }, { title: "2017", value: "2017" }, { title: "2016", value: "2016" }, { title: "2015", value: "2015" }, { title: "2014-2011", value: "2014-2011" }, { title: "更早", value: "更早" } ] },
+        { name: "mainArea", title: "地区", type: "enumeration", defaultValue: "", enumOptions: [ { title: "全部地区", value: "" }, { title: "中国内地", value: "中国内地" }, { title: "中国香港", value: "中国香港" }, { title: "中国台湾", value: "中国台湾" }, { title: "韩国", value: "韩国" }, { title: "美国", value: "美国" }, { title: "英国", value: "英国" }, { title: "日本", value: "日本" }, { title: "泰国", value: "泰国" } ] },
+        { name: "year", title: "年份", type: "enumeration", defaultValue: "", enumOptions: [ { title: "全部年份", value: "" }, { title: "即将上线", value: "即将上线" }, { title: "2026", value: "2026" }, { title: "2025", value: "2025" }, { title: "2024", value: "2024" }, { title: "2023", value: "2023" }, { title: "2022", value: "2022" }, { title: "2021", value: "2021" }, { title: "2020", value: "2020" }, { title: "2019", value: "2019" }, { title: "2018", value: "2018" }, { title: "2017", value: "2017" }, { title: "2016", value: "2016" }, { title: "2015", value: "2015" }, { title: "2014-2011", value: "2014-2011" }, { title: "更早", value: "更早" } ] },
         { name: "page", title: "页码", type: "page" }
       ]
     },
@@ -35,10 +37,11 @@ var WidgetMetadata = {
       id: "ykVariety",
       title: "综艺",
       functionName: "loadYkVariety",
+      type: "media_list",
       cacheDuration: 600,
       params: [
-        { name: "mainArea", title: "地区", type: "enumeration", default: "", enumOptions: [ { title: "全部地区", value: "" }, { title: "中国内地", value: "中国内地" }, { title: "中国香港", value: "中国香港" }, { title: "中国台湾", value: "中国台湾" }, { title: "韩国", value: "韩国" }, { title: "美国", value: "美国" }, { title: "英国", value: "英国" }, { title: "日本", value: "日本" }, { title: "泰国", value: "泰国" } ] },
-        { name: "year", title: "年份", type: "enumeration", default: "", enumOptions: [ { title: "全部年份", value: "" }, { title: "即将上线", value: "即将上线" }, { title: "2026", value: "2026" }, { title: "2025", value: "2025" }, { title: "2024", value: "2024" }, { title: "2023", value: "2023" }, { title: "2022", value: "2022" }, { title: "2021", value: "2021" }, { title: "2020", value: "2020" }, { title: "2019", value: "2019" }, { title: "2018", value: "2018" }, { title: "2017", value: "2017" }, { title: "2016", value: "2016" }, { title: "2015", value: "2015" }, { title: "2014-2011", value: "2014-2011" }, { title: "更早", value: "更早" } ] },
+        { name: "mainArea", title: "地区", type: "enumeration", defaultValue: "", enumOptions: [ { title: "全部地区", value: "" }, { title: "中国内地", value: "中国内地" }, { title: "中国香港", value: "中国香港" }, { title: "中国台湾", value: "中国台湾" }, { title: "韩国", value: "韩国" }, { title: "美国", value: "美国" }, { title: "英国", value: "英国" }, { title: "日本", value: "日本" }, { title: "泰国", value: "泰国" } ] },
+        { name: "year", title: "年份", type: "enumeration", defaultValue: "", enumOptions: [ { title: "全部年份", value: "" }, { title: "即将上线", value: "即将上线" }, { title: "2026", value: "2026" }, { title: "2025", value: "2025" }, { title: "2024", value: "2024" }, { title: "2023", value: "2023" }, { title: "2022", value: "2022" }, { title: "2021", value: "2021" }, { title: "2020", value: "2020" }, { title: "2019", value: "2019" }, { title: "2018", value: "2018" }, { title: "2017", value: "2017" }, { title: "2016", value: "2016" }, { title: "2015", value: "2015" }, { title: "2014-2011", value: "2014-2011" }, { title: "更早", value: "更早" } ] },
         { name: "page", title: "页码", type: "page" }
       ]
     },
@@ -46,10 +49,11 @@ var WidgetMetadata = {
       id: "ykAnime",
       title: "动漫",
       functionName: "loadYkAnime",
+      type: "media_list",
       cacheDuration: 600,
       params: [
-        { name: "mainArea", title: "地区", type: "enumeration", default: "", enumOptions: [ { title: "全部地区", value: "" }, { title: "中国内地", value: "中国内地" }, { title: "中国香港", value: "中国香港" }, { title: "中国台湾", value: "中国台湾" }, { title: "韩国", value: "韩国" }, { title: "美国", value: "美国" }, { title: "英国", value: "英国" }, { title: "日本", value: "日本" }, { title: "泰国", value: "泰国" } ] },
-        { name: "year", title: "年份", type: "enumeration", default: "", enumOptions: [ { title: "全部年份", value: "" }, { title: "即将上线", value: "即将上线" }, { title: "2026", value: "2026" }, { title: "2025", value: "2025" }, { title: "2024", value: "2024" }, { title: "2023", value: "2023" }, { title: "2022", value: "2022" }, { title: "2021", value: "2021" }, { title: "2020", value: "2020" }, { title: "2019", value: "2019" }, { title: "2018", value: "2018" }, { title: "2017", value: "2017" }, { title: "2016", value: "2016" }, { title: "2015", value: "2015" }, { title: "2014-2011", value: "2014-2011" }, { title: "更早", value: "更早" } ] },
+        { name: "mainArea", title: "地区", type: "enumeration", defaultValue: "", enumOptions: [ { title: "全部地区", value: "" }, { title: "中国内地", value: "中国内地" }, { title: "中国香港", value: "中国香港" }, { title: "中国台湾", value: "中国台湾" }, { title: "韩国", value: "韩国" }, { title: "美国", value: "美国" }, { title: "英国", value: "英国" }, { title: "日本", value: "日本" }, { title: "泰国", value: "泰国" } ] },
+        { name: "year", title: "年份", type: "enumeration", defaultValue: "", enumOptions: [ { title: "全部年份", value: "" }, { title: "即将上线", value: "即将上线" }, { title: "2026", value: "2026" }, { title: "2025", value: "2025" }, { title: "2024", value: "2024" }, { title: "2023", value: "2023" }, { title: "2022", value: "2022" }, { title: "2021", value: "2021" }, { title: "2020", value: "2020" }, { title: "2019", value: "2019" }, { title: "2018", value: "2018" }, { title: "2017", value: "2017" }, { title: "2016", value: "2016" }, { title: "2015", value: "2015" }, { title: "2014-2011", value: "2014-2011" }, { title: "更早", value: "更早" } ] },
         { name: "page", title: "页码", type: "page" }
       ]
     },
@@ -57,10 +61,11 @@ var WidgetMetadata = {
       id: "ykDoc",
       title: "纪录片",
       functionName: "loadYkDoc",
+      type: "media_list",
       cacheDuration: 600,
       params: [
-        { name: "mainArea", title: "地区", type: "enumeration", default: "", enumOptions: [ { title: "全部地区", value: "" }, { title: "中国内地", value: "中国内地" }, { title: "中国香港", value: "中国香港" }, { title: "中国台湾", value: "中国台湾" }, { title: "韩国", value: "韩国" }, { title: "美国", value: "美国" }, { title: "英国", value: "英国" }, { title: "日本", value: "日本" }, { title: "泰国", value: "泰国" } ] },
-        { name: "year", title: "年份", type: "enumeration", default: "", enumOptions: [ { title: "全部年份", value: "" }, { title: "即将上线", value: "即将上线" }, { title: "2026", value: "2026" }, { title: "2025", value: "2025" }, { title: "2024", value: "2024" }, { title: "2023", value: "2023" }, { title: "2022", value: "2022" }, { title: "2021", value: "2021" }, { title: "2020", value: "2020" }, { title: "2019", value: "2019" }, { title: "2018", value: "2018" }, { title: "2017", value: "2017" }, { title: "2016", value: "2016" }, { title: "2015", value: "2015" }, { title: "2014-2011", value: "2014-2011" }, { title: "更早", value: "更早" } ] },
+        { name: "mainArea", title: "地区", type: "enumeration", defaultValue: "", enumOptions: [ { title: "全部地区", value: "" }, { title: "中国内地", value: "中国内地" }, { title: "中国香港", value: "中国香港" }, { title: "中国台湾", value: "中国台湾" }, { title: "韩国", value: "韩国" }, { title: "美国", value: "美国" }, { title: "英国", value: "英国" }, { title: "日本", value: "日本" }, { title: "泰国", value: "泰国" } ] },
+        { name: "year", title: "年份", type: "enumeration", defaultValue: "", enumOptions: [ { title: "全部年份", value: "" }, { title: "即将上线", value: "即将上线" }, { title: "2026", value: "2026" }, { title: "2025", value: "2025" }, { title: "2024", value: "2024" }, { title: "2023", value: "2023" }, { title: "2022", value: "2022" }, { title: "2021", value: "2021" }, { title: "2020", value: "2020" }, { title: "2019", value: "2019" }, { title: "2018", value: "2018" }, { title: "2017", value: "2017" }, { title: "2016", value: "2016" }, { title: "2015", value: "2015" }, { title: "2014-2011", value: "2014-2011" }, { title: "更早", value: "更早" } ] },
         { name: "page", title: "页码", type: "page" }
       ]
     },
@@ -68,10 +73,11 @@ var WidgetMetadata = {
       id: "ykKids",
       title: "少儿",
       functionName: "loadYkKids",
+      type: "media_list",
       cacheDuration: 600,
       params: [
-        { name: "mainArea", title: "地区", type: "enumeration", default: "", enumOptions: [ { title: "全部地区", value: "" }, { title: "中国内地", value: "中国内地" }, { title: "中国香港", value: "中国香港" }, { title: "中国台湾", value: "中国台湾" }, { title: "韩国", value: "韩国" }, { title: "美国", value: "美国" }, { title: "英国", value: "英国" }, { title: "日本", value: "日本" }, { title: "泰国", value: "泰国" } ] },
-        { name: "year", title: "年份", type: "enumeration", default: "", enumOptions: [ { title: "全部年份", value: "" }, { title: "即将上线", value: "即将上线" }, { title: "2026", value: "2026" }, { title: "2025", value: "2025" }, { title: "2024", value: "2024" }, { title: "2023", value: "2023" }, { title: "2022", value: "2022" }, { title: "2021", value: "2021" }, { title: "2020", value: "2020" }, { title: "2019", value: "2019" }, { title: "2018", value: "2018" }, { title: "2017", value: "2017" }, { title: "2016", value: "2016" }, { title: "2015", value: "2015" }, { title: "2014-2011", value: "2014-2011" }, { title: "更早", value: "更早" } ] },
+        { name: "mainArea", title: "地区", type: "enumeration", defaultValue: "", enumOptions: [ { title: "全部地区", value: "" }, { title: "中国内地", value: "中国内地" }, { title: "中国香港", value: "中国香港" }, { title: "中国台湾", value: "中国台湾" }, { title: "韩国", value: "韩国" }, { title: "美国", value: "美国" }, { title: "英国", value: "英国" }, { title: "日本", value: "日本" }, { title: "泰国", value: "泰国" } ] },
+        { name: "year", title: "年份", type: "enumeration", defaultValue: "", enumOptions: [ { title: "全部年份", value: "" }, { title: "即将上线", value: "即将上线" }, { title: "2026", value: "2026" }, { title: "2025", value: "2025" }, { title: "2024", value: "2024" }, { title: "2023", value: "2023" }, { title: "2022", value: "2022" }, { title: "2021", value: "2021" }, { title: "2020", value: "2020" }, { title: "2019", value: "2019" }, { title: "2018", value: "2018" }, { title: "2017", value: "2017" }, { title: "2016", value: "2016" }, { title: "2015", value: "2015" }, { title: "2014-2011", value: "2014-2011" }, { title: "更早", value: "更早" } ] },
         { name: "page", title: "页码", type: "page" }
       ]
     }

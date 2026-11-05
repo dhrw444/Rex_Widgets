@@ -6,13 +6,14 @@ var WidgetMetadata = {
   description: "抖音片单 + 推荐流 + 合集 + TikTok，支持搜索已添加的片单",
   author: "Minis",
   globalParams: [
-    { name: "base", title: "API 地址", type: "input", default: "", description: "填你部署的 douyin-worker 地址；留空使用内置地址" }
+    { name: "base", title: "API 地址", type: "input", defaultValue: "", description: "填你部署的 douyin-worker 地址；留空使用内置地址" }
   ],
   modules: [
     {
       id: "dyRank",
       title: "片单",
       functionName: "loadDyRank",
+      type: "media_list",
       cacheDuration: 300,
       params: [
         { name: "page", title: "页码", type: "page" }
@@ -22,6 +23,7 @@ var WidgetMetadata = {
       id: "dyFeed",
       title: "推荐流",
       functionName: "loadDyFeed",
+      type: "media_list",
       cacheDuration: 300,
       params: [
         { name: "page", title: "换一批", type: "page" }
@@ -31,6 +33,7 @@ var WidgetMetadata = {
       id: "dyMix",
       title: "合集",
       functionName: "loadDyMix",
+      type: "media_list",
       cacheDuration: 600,
       params: [
         { name: "url", title: "合集链接", type: "input", description: "粘贴抖音合集分享链接，如 https://v.douyin.com/xxxx" },
@@ -41,6 +44,7 @@ var WidgetMetadata = {
       id: "dyTt",
       title: "TikTok",
       functionName: "loadDyTikTok",
+      type: "media_list",
       cacheDuration: 300,
       params: [
         { name: "url", title: "视频链接", type: "input", description: "粘贴 TikTok 视频链接，支持 vm.tiktok.com 短链" },
@@ -54,16 +58,19 @@ var WidgetMetadata = {
       type: "stream",
       cacheDuration: 0,
       params: []
+    },
+    {
+      id: "dySearch",
+      title: "搜索片单",
+      functionName: "searchPresets",
+      type: "media_list",
+      cacheDuration: 300,
+      params: [
+        { name: "keyword", title: "关键词", type: "input", required: true, placeholders: [{ title: "剧名", value: "" }] },
+        { name: "page", title: "页码", type: "page" }
+      ]
     }
-  ],
-  search: {
-    title: "搜索片单",
-    functionName: "searchPresets",
-    params: [
-      { name: "keyword", title: "关键词", type: "input", placeholders: [{ title: "剧名", value: "" }] },
-      { name: "page", title: "页码", type: "page" }
-    ]
-  }
+  ]
 };
 
 var DY_FALLBACK = "https://dytk.518518.qzz.io";
